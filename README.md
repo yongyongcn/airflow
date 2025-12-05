@@ -38,3 +38,12 @@ localhost:8080
 ```bash
 docker compse down
 ```
+
+# Source - https://stackoverflow.com/a
+# Posted by mik-laj, modified by community. See post 'Timeline' for change history
+# Retrieved 2025-12-04, License - CC BY-SA 4.0
+
+- build a custom image
+```
+docker build . --tag my-company-airflow:2.0.0
+```

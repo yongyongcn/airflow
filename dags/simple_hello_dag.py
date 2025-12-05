@@ -6,10 +6,15 @@ from airflow.models.dag import DAG
 from airflow.operators.bash import BashOperator
 from utils_local.add import add
 from airflow.operators.python import PythonOperator
+import airflow.providers.mysql as mysql_providers
+ #.operators.mysql import MySqlOperator
+import airflow.providers.postgres
+#.operators.postgres import PostgresOperator
+from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 
 # Define default arguments for the DAG
 with DAG(
-    dag_id="simple_hello_world_dag",
+    dag_id="simple_hello_dag",
     start_date=pendulum.datetime(2023, 1, 1, tz="UTC"),
     schedule=None,
     catchup=False,
