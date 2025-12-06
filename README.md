@@ -1,4 +1,4 @@
-# Prerquisite
+# How to start a similar project from scratch
 - install uv
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -13,7 +13,14 @@ source .venv/bin/activate
 ```bash
 curl -LfO 'https://airflow.apache.org/docs/apache-airflow/stable/docker-compose.yaml'
 ```
-- set the uer id
+
+# If you are cloning from this project
+- Install uv
+- then install dependencies
+```bash
+uv sync
+```
+- !set the uer id
 ```bash
 echo -e "AIRFLOW_UID=$(id -u)" > .env
 ```
@@ -47,3 +54,6 @@ docker compse down
 ```
 docker build . --tag my-company-airflow:2.0.0
 ```
+
+# Debug
+- file cannot change: echo -e "AIRFLOW_UID=$(id -u)" > .env

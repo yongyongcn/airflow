@@ -4,3 +4,5 @@ COPY requirements.txt /
 RUN /home/airflow/.local/bin/python -m pip install --no-cache-dir -r /requirements.txt
 
 USER airflow
+
+ENV AIRFLOW_HOME=/opt/airflow
